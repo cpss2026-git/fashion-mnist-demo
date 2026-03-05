@@ -2,32 +2,21 @@
 
 ## 仮想環境のセットアップ
 
-### uvを使う場合。
+Python 3.11系を推奨。pyenvがあればそれを使う。
 
 ```sh
-uv venv
-source .venv/bin/activate
-uv pip install tensorflow tensorflowjs
+pyenv --install 3.11.15
+pyenv global 3.11.15
 ```
 
-Macの場合は、仮想環境を作る時に`python3.11`を指定する必要がある。
-
 ```sh
-uv venv --python 3.11
-source .venv/bin/activate
-uv pip install tensorflow tensorflowjs
-```
-
-### venvを使う場合
-
-```sh
-python3 -m venv .venv  
+python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install --upgrade pip
 python3 -m pip install tensorflow tensorflowjs
 ```
 
-Macの場合は、仮想環境を作る時に`python3.11`を指定する必要がある。
+Macの場合は、仮想環境を作る時に`python3.11`を指定する必要がある。pyenvで指定しても良い。
 
 ```sh
 python3.11 -m venv .venv
@@ -70,7 +59,6 @@ python3 check.py
 出力。
 
 ```txt
-$ python3 check.py
 0: true=Boot     pred=Boot     Correct
 1: true=Pullover pred=Pullover Correct
 2: true=Trouser  pred=Trouser  Correct
