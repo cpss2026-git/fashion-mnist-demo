@@ -81,7 +81,7 @@ $ python3 check.py
 Accuracy: 86/100 = 86.00%
 ```
 
-エクスポート。
+Python側から重みをエクスポート。
 
 ```sh
 $ python3 export.py
@@ -100,6 +100,11 @@ Captures:
 Model was exported.
 ```
 
+エクスポートされたデータをJSで読める形に変換。
+
 ```sh
 tensorflowjs_converter export docs/model
 ```
+
+`docs/index.html`をLive Serverで開いて確認。
+
