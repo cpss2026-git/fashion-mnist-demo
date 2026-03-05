@@ -81,3 +81,7 @@ Captures:
   5171496912: TensorSpec(shape=(), dtype=tf.resource, name=None)
 Model was exported.
 ```
+
+```sh
+tensorflowjs_converter export docs/model
+```
