@@ -96,3 +96,21 @@ tensorflowjs_converter export docs/model
 
 `docs/index.html`をLive Serverで開いて確認。
 
+## 学習データの例
+
+| Bag | Boot | Coat | Dress | Pullover | Sandal | Shirt | Sneaker | Top |
+|-----|------|------|-------|----------|--------|-------|---------|-----|
+| ![](docs/img/Bag/0.png) | ![](docs/img/Boot/0.png) | ![](docs/img/Coat/0.png) | ![](docs/img/Dress/0.png) | ![](docs/img/Pullover/0.png) | ![](docs/img/Sandal/0.png) | ![](docs/img/Shirt/0.png) | ![](docs/img/Sneaker/0.png) | ![](docs/img/Top/0.png) |
+| ![](docs/img/Bag/1.png) | ![](docs/img/Boot/1.png) | ![](docs/img/Coat/1.png) | ![](docs/img/Dress/1.png) | ![](docs/img/Pullover/1.png) | ![](docs/img/Sandal/1.png) | ![](docs/img/Shirt/1.png) | ![](docs/img/Sneaker/1.png) | ![](docs/img/Top/1.png) |
+| ![](docs/img/Bag/2.png) | ![](docs/img/Boot/2.png) | ![](docs/img/Coat/2.png) | ![](docs/img/Dress/2.png) | ![](docs/img/Pullover/2.png) | ![](docs/img/Sandal/2.png) | ![](docs/img/Shirt/2.png) | ![](docs/img/Sneaker/2.png) | ![](docs/img/Top/2.png) |
+| ![](docs/img/Bag/3.png) | ![](docs/img/Boot/3.png) | ![](docs/img/Coat/3.png) | ![](docs/img/Dress/3.png) | ![](docs/img/Pullover/3.png) | ![](docs/img/Sandal/3.png) | ![](docs/img/Shirt/3.png) | ![](docs/img/Sneaker/3.png) | ![](docs/img/Top/3.png) |
+| ![](docs/img/Bag/4.png) | ![](docs/img/Boot/4.png) | ![](docs/img/Coat/4.png) | ![](docs/img/Dress/4.png) | ![](docs/img/Pullover/4.png) | ![](docs/img/Sandal/4.png) | ![](docs/img/Shirt/4.png) | ![](docs/img/Sneaker/4.png) | ![](docs/img/Top/4.png) |
+| ![](docs/img/Bag/5.png) | ![](docs/img/Boot/5.png) | ![](docs/img/Coat/5.png) | ![](docs/img/Dress/5.png) | ![](docs/img/Pullover/5.png) | ![](docs/img/Sandal/5.png) | ![](docs/img/Shirt/5.png) | ![](docs/img/Sneaker/5.png) | ![](docs/img/Top/5.png) |
+| ![](docs/img/Bag/6.png) | ![](docs/img/Boot/6.png) | ![](docs/img/Coat/6.png) | ![](docs/img/Dress/6.png) | ![](docs/img/Pullover/6.png) | ![](docs/img/Sandal/6.png) | ![](docs/img/Shirt/6.png) | ![](docs/img/Sneaker/6.png) | ![](docs/img/Top/6.png) |
+| ![](docs/img/Bag/7.png) | ![](docs/img/Boot/7.png) | ![](docs/img/Coat/7.png) | ![](docs/img/Dress/7.png) | ![](docs/img/Pullover/7.png) | ![](docs/img/Sandal/7.png) | ![](docs/img/Shirt/7.png) | ![](docs/img/Sneaker/7.png) | ![](docs/img/Top/7.png) |
+| ![](docs/img/Bag/8.png) | ![](docs/img/Boot/8.png) | ![](docs/img/Coat/8.png) | ![](docs/img/Dress/8.png) | ![](docs/img/Pullover/8.png) | ![](docs/img/Sandal/8.png) | ![](docs/img/Shirt/8.png) | ![](docs/img/Sneaker/8.png) | ![](docs/img/Top/8.png) |
+| ![](docs/img/Bag/9.png) | ![](docs/img/Boot/9.png) | ![](docs/img/Coat/9.png) | ![](docs/img/Dress/9.png) | ![](docs/img/Pullover/9.png) | ![](docs/img/Sandal/9.png) | ![](docs/img/Shirt/9.png) | ![](docs/img/Sneaker/9.png) | ![](docs/img/Top/9.png) |
+
+## LICENSE
+
+MIT
