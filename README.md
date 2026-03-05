@@ -2,6 +2,24 @@
 
 ## 仮想環境のセットアップ
 
+### uvを使う場合。
+
+```sh
+uv venv
+source .venv/bin/activate
+uv pip install tensorflow tensorflowjs
+```
+
+Macの場合は、仮想環境を作る時に`python3.11`を指定する必要がある。
+
+```sh
+uv venv --python 3.11
+source .venv/bin/activate
+uv pip install tensorflow tensorflowjs
+```
+
+### venvを使う場合
+
 ```sh
 python3 -m venv .venv  
 source .venv/bin/activate
