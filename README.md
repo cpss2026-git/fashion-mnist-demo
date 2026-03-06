@@ -2,7 +2,7 @@
 
 ## 仮想環境のセットアップ
 
-Python 3.11系を推奨。pyenvがあればそれを使う。
+Python 3.11以降が必要。pyenvがあればそれを使う。
 
 ```sh
 pyenv --install 3.11.15
@@ -16,7 +16,7 @@ python3 -m pip install --upgrade pip
 python3 -m pip install tensorflow tensorflowjs
 ```
 
-Macの場合は、仮想環境を作る時に`python3.11`を指定する必要がある。pyenvで指定しても良い。
+Macの場合はpyenvで指定しても良いが、仮想環境を作るときに`python3.11`を使ってもよい。仮想環境をアクティベートした後は`python3`として実行できる。
 
 ```sh
 python3.11 -m venv .venv
@@ -26,6 +26,8 @@ python3 -m pip install tensorflow
 ```
 
 ## 訓練
+
+モデルを訓練する。
 
 ```sh
 python3 train.py
@@ -50,7 +52,12 @@ Test accuracy: 0.8715999722480774
 Model was saved.
 ```
 
+実行後、訓練した結果の重みが`model.keras`に保存される。
+
 ## チェック
+
+保存されたモデルをロードして精度をチェックする。学習に使っていないテストデータを100個入力し、何個正解したかを調べる。
+
 
 ```sh
 python3 check.py
@@ -69,11 +76,15 @@ python3 check.py
 Accuracy: 86/100 = 86.00%
 ```
 
+## 重みをJavaScript用にエクスポート
+
 Python側から重みをエクスポート。
 
 ```sh
-$ python3 export.py
+python3 export.py
+```
 
+```sh
 Saved artifact at 'export'. The following endpoints are available:
 
 * Endpoint 'serve'
@@ -88,13 +99,46 @@ Captures:
 Model was exported.
 ```
 
-エクスポートされたデータをJSで読める形に変換。
+情報が`export`というディレクトリに保存される。さらにそれをJSで読める形に変換。
 
 ```sh
 tensorflowjs_converter export docs/model
 ```
 
-`docs/index.html`をLive Serverで開いて確認。
+`export`にある情報が`docs/model`に保存される。
+
+
+なお、setuptoolsのバージョンによっては、以下のようなエラーが起きる場合がる。
+
+```txt
+Traceback (most recent call last):
+  File "/home/watanabe/github/fashion-mnist-demo/.venv/bin/tensorflowjs_converter", line 3, in <module>
+    from tensorflowjs.converters.converter import pip_main
+  File "/home/watanabe/github/fashion-mnist-demo/.venv/lib/python3.12/site-packages/tensorflowjs/__init__.py", line 21, in <module>
+    from tensorflowjs import converters
+  File "/home/watanabe/github/fashion-mnist-demo/.venv/lib/python3.12/site-packages/tensorflowjs/converters/__init__.py", line 21, in <module>
+    from tensorflowjs.converters.converter import convert
+  File "/home/watanabe/github/fashion-mnist-demo/.venv/lib/python3.12/site-packages/tensorflowjs/converters/converter.py", line 38, in <module>
+    from tensorflowjs.converters import tf_saved_model_conversion_v2
+  File "/home/watanabe/github/fashion-mnist-demo/.venv/lib/python3.12/site-packages/tensorflowjs/converters/tf_saved_model_conversion_v2.py", line 51, in <module>
+    import tensorflow_hub as hub
+  File "/home/watanabe/github/fashion-mnist-demo/.venv/lib/python3.12/site-packages/tensorflow_hub/__init__.py", line 85, in <module>
+    _ensure_tf_install()
+  File "/home/watanabe/github/fashion-mnist-demo/.venv/lib/python3.12/site-packages/tensorflow_hub/__init__.py", line 61, in _ensure_tf_install
+    from pkg_resources import parse_version
+ModuleNotFoundError: No module named 'pkg_resources'
+```
+
+その場合はsetuptoolsを一度アンインストールし、バージョン80.9.0ををインストールすればよい。
+
+```sh
+python3 -m pip uninstall setuptools
+python3 -m pip install "setuptools==80.9.0"
+```
+
+## 動作確認
+
+VS CodeのLive Serverで `docs/index.html`を開いて動作確認。
 
 ## 学習データの例
 
