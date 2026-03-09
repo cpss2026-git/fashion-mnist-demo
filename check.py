@@ -47,7 +47,7 @@ for i in range(test_num):
         result = f"{GREEN}Correct{RESET}"
         correct_num += 1
     else:
-        result = f"{RED}IncorrectL{RESET}"
+        result = f"{RED}Incorrect{RESET}"
 
     print(f"{i:2d}: true={true_label:8s} pred={pred_label:8s} {result}")
 accuracy = correct_num / test_num
